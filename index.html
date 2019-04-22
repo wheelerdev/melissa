@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Melissa Wheeler Seattle Content Writer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Roboto:300,400,500,700,500i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <section class="landing">
+        <div class="mobile-nav">
+            <div class="viewport">
+                <header class="header" role="banner">
+                    <img class="logo" src="images/logo.svg">
+
+                    <nav id="nav" class="nav" role="navigation">
+
+                        <!-- ACTUAL NAVIGATION MENU -->
+                        <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
+                            <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
+                            <li class="nav__item"><a href="#about" onclick="location.reload()"
+                                    class="nav__link">About</a>
+                            </li>
+                            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                        </ul>
+
+                        <!-- MENU TOGGLE BUTTON -->
+                        <a href="#nav" class="nav__toggle" role="button" aria-expanded="false" aria-controls="menu">
+                            <svg class="menuicon" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                viewBox="0 0 50 50">
+                                <title>Toggle Menu</title>
+                                <g>
+                                    <line class="menuicon__bar" x1="13" y1="16.5" x2="37" y2="16.5" />
+                                    <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5" />
+                                    <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5" />
+                                    <line class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5" />
+                                    <circle class="menuicon__circle" r="23" cx="25" cy="25" />
+                                </g>
+                            </svg>
+                        </a>
+
+                        <!-- ANIMATED BACKGROUND ELEMENT -->
+                        <div class="splash"></div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+
+        <div class="desktop-nav">
+            <img src="images/logo.svg">
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="me">
+            <h1>Hello, I'm Melissa and I <span class="highlight-red">write quality content.</span></h1>
+        </div>
+        <div class="arrow">
+            <img src="images/arrow.svg">
+        </div>
+    </section>
+
+
+    <section class="services">
+        <h1>Discover the words to <span class="highlight-purple">tell your story.</span> Rise above useless, wordy content and embrace strategic storytelling.</h1>
+        <div class="container">
+            <div class="infobox">
+                <br>
+                <img src="images/icon-blog.svg">
+                <h2>Blog Writing</h2>
+                <h4>Bring value and readers with fresh, original articles.</h4>
+                <br>
+            </div>
+            <div class="infobox">
+                <br>
+                <img src="images/icon-content.svg">
+                <h2>Content Writing</h2>
+                <h4>Made-to-order content for your unique needs and goals.</h4>
+                <br>
+            </div>
+            <div class="infobox infoboxmargin imspecial">
+                <br>
+                <img src="images/icon-articles.svg">
+                <h2>Articles & Media Outreach</h2>
+                <h4 class="minusmargin">Researched, concise articles aimed for your target audience.</h4>
+                <br>
+            </div>
+            <div class="infobox infoboxmargin">
+                <br>
+                <img src="images/icon-strategy.svg">
+                <h2>Content Strategy</h2>
+                <h4>Finding a voice and writing is hard! Let me discover and strategize the best ways to tell your story.</h4>
+                <br>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div>
+            <h3>“Melissa has been fantastic, the articles she produced drove traffic to our site and raised our SEO
+                rankings. Melissa has been fantastic, the articles she produced drove traffic to our site and raised our
+                SEO rankings.”</h3>
+            <h3>“Melissa has been fantastic, the articles she produced drove traffic to our site and raised our SEO
+                rankings. Melissa has been fantastic, the articles she produced drove traffic to our site and raised our
+                SEO rankings.”</h3>
+            <h3>“Melissa has been fantastic, the articles she produced drove traffic to our site and raised our SEO
+                rankings. Melissa has been fantastic, the articles she produced drove traffic to our site and raised our
+                SEO rankings.”</h3>
+        </div>
+    </section>
+
+    <section class="services">
+        <h1>Past Work</h1>
+        <div class="container">
+            <div class="clientbox">
+                <img src="images/healthy.svg">
+            </div>
+            <div class="clientbox">
+                <img src="images/scad.svg">
+            </div>
+            <div class="clientbox infoboxmargin imspecial">
+                <img src="images/kfb.svg">
+            </div>
+            <div class="clientbox infoboxmargin">
+                <img src="images/redrock.svg">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h1>About Melissa</h1>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</h3>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1>Contact Me.</h1>
+        <h3>Let’s talk about your project! Email me <a href="mailto:#">here</a>. Find me on Linkdin <a
+                href="https://www.linkedin.com/in/melissawheeler/">here</a>.</h3>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <h4>Site design and code by Scott Wheeler. Copywright 2018.</h4>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
