@@ -7,6 +7,11 @@
   --screen-height: 100vh;
   --header-bg-color: white;
   --splash-bg-color: #F46662;
+  --purple: #5454AB;
+  --red: #F46662;
+  --off-black: #3C3C3C;
+  --light-gray: #646464;
+  --faint-gray: #FAFAFA;
 }
 
 // calculate a circle's circumference based on radius
@@ -304,12 +309,12 @@ h1 {
     color: #646464;
     font-weight: 300;
   }
-  
+
   li a {
     text-decoration: none;
     color: #646464;
   }
-  
+
   li a:hover {
     color: #5454AB;
   }
@@ -334,8 +339,10 @@ h1 {
   color: #F46662;
 }
 
-.highlight-purple {
-  color: #5454AB;
+.highlight-purple,
+h1.highlight-purple {
+  // color: #5454AB;
+  color: var(--purple);
 }
 
 .arrow {
@@ -470,23 +477,90 @@ h1 {
   padding: 20px;
 }
 
+// ---------------------------
+// Work Page CSS
+// ---------------------------
+
+
+.work-landing {
+  height: calc(70vh - 150px);
+  // height: fit-content;
+  // height: 100vh;
+  background-color: #FAFAFA;
+}
+
+.work-overview {
+  position: absolute;
+  padding: 8vh 8.7% 0;
+  color: #3C3C3C;
+  font-family: 'Roboto', sans-serif;
+
+  h1 {
+    display: inline-block;
+    // float: left;
+    color: inherit;
+    font-weight: 500;
+    padding-bottom: 1em;
+  }
+
+  img {
+    float: right;
+    width: 185px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
+    margin-left: 25px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    color: inherit;
+  }
+
+  h4 {
+    color: var(--purple);
+  }
+
+  p {
+    color: inherit;
+    font-weight: 300;
+  }
+}
+
+.work-footer {
+  background-color: rgba(244, 102, 98, .9);
+  background-image: linear-gradient(to right, rgba(244, 102, 98, 0.9), rgba(84, 84, 171, 0.6));
+  text-align: center;
+  padding: 20px;
+  width: 100vw;
+  position: relative;
+  left: 49%;
+  right: 49%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  h4 {
+    font-family: 'Arvo', serif;
+    color: #FFFFFF;
+    font-weight: 400;
+  }
+}
 
 
 // /* -----Media Queries-------------- */
 @media screen and (max-width: 999px) {
   .container {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      padding: 0 7%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 7%;
   }
 
-  .infobox, .clientbox {
-      margin: 0 4% 50px 4%;
+  .infobox,
+  .clientbox {
+    margin: 0 4% 50px 4%;
   }
 
   .infoboxmargin {
-      margin-bottom: 108px;
+    margin-bottom: 108px;
   }
 }
 
@@ -507,6 +581,18 @@ h1 {
     display: none;
   }
 
+  div.work-overview {
+    position: relative;
+    top: -150%;
+  }
+
+  section.work-overview {
+    position: relative;
+    top: 100vh;
+    z-index: 1;
+    // height: 100vh;
+  }
+
   .me {
     top: 15px;
     z-index: 1;
@@ -514,5 +600,19 @@ h1 {
 
   .arrow {
     padding-left: 48%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .work-overview {
+    img {
+      float: none;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      margin-left: unset;
+      transform: translate(-50%);
+      margin-bottom: 3rem;
+    }
   }
 }
