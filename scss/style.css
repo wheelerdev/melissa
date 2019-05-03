@@ -469,6 +469,7 @@ h1.highlight-purple {
 .footer {
   font-family: 'Arvo', serif;
   color: #FFFFFF;
+  font-size: 12px;
   font-weight: 400;
   background-color: rgba(244, 102, 98, 0.9);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(244, 102, 98, 0.9)), to(rgba(84, 84, 171, 0.6)));
@@ -478,15 +479,14 @@ h1.highlight-purple {
 }
 
 .work-landing {
-  height: calc(70vh - 150px);
-  background-color: #FAFAFA;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .work-overview {
-  position: absolute;
+  position: relative;
   padding: 8vh 8.7% 0;
   color: #3C3C3C;
-  font-family: 'Roboto', sans-serif;
 }
 
 .work-overview h1 {
@@ -509,11 +509,24 @@ h1.highlight-purple {
   color: inherit;
 }
 
-.work-overview h4 {
+.work-sample {
+  position: relative;
+  padding: 8vh 8.7% 0;
+  background-color: var(--faint-gray);
+  color: #3C3C3C;
+}
+
+.work-sample h1 {
+  color: var(--purple);
+  font-weight: 500;
+  padding-bottom: 1em;
+}
+
+.work-sample h4 {
   color: var(--purple);
 }
 
-.work-overview p {
+.work-sample p {
   color: inherit;
   font-weight: 300;
 }
@@ -523,19 +536,19 @@ h1.highlight-purple {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(244, 102, 98, 0.9)), to(rgba(84, 84, 171, 0.6)));
   background-image: linear-gradient(to right, rgba(244, 102, 98, 0.9), rgba(84, 84, 171, 0.6));
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   width: 100vw;
   position: relative;
   left: 49%;
   right: 49%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  margin-left: -49vw;
+  margin-right: -49vw;
 }
 
 .work-footer h4 {
+  font-size: 12px;
   font-family: 'Arvo', serif;
   color: #FFFFFF;
-  font-weight: 400;
 }
 
 @media screen and (max-width: 999px) {
@@ -575,25 +588,14 @@ h1.highlight-purple {
   .desktop-nav {
     display: none;
   }
-  div.work-overview {
-    position: relative;
-    top: -150%;
+  .viewport {
+    position: absolute;
   }
-  section.work-overview {
+  .work-overview {
     position: relative;
-    top: 100vh;
+    top: 75px;
     z-index: 1;
   }
-  .me {
-    top: 15px;
-    z-index: 1;
-  }
-  .arrow {
-    padding-left: 48%;
-  }
-}
-
-@media screen and (max-width: 530px) {
   .work-overview img {
     float: none;
     position: relative;
@@ -603,6 +605,19 @@ h1.highlight-purple {
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
     margin-bottom: 3rem;
+  }
+  .work-overview h3 {
+    padding-bottom: 30px;
+  }
+  .work-sample {
+    position: relative;
+  }
+  .me {
+    top: 15px;
+    z-index: 1;
+  }
+  .arrow {
+    padding-left: 48%;
   }
 }
 /*# sourceMappingURL=style.css.map */

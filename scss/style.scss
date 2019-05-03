@@ -470,6 +470,7 @@ h1.highlight-purple {
 .footer {
   font-family: 'Arvo', serif;
   color: #FFFFFF;
+  font-size: 12px;
   font-weight: 400;
   background-color: rgba(244, 102, 98, .9);
   background-image: linear-gradient(to right, rgba(244, 102, 98, 0.9), rgba(84, 84, 171, 0.6));
@@ -483,21 +484,22 @@ h1.highlight-purple {
 
 
 .work-landing {
-  height: calc(70vh - 150px);
-  // height: fit-content;
-  // height: 100vh;
-  background-color: #FAFAFA;
+  // position: relative;
+  // overflow: auto;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  // height: calc(70vh - 150px);
+  // height: 70vh;
+  // min-height: calc(70vh - 20vw); // seems to work for vertical screens
 }
 
 .work-overview {
-  position: absolute;
+  position: relative;
   padding: 8vh 8.7% 0;
   color: #3C3C3C;
-  font-family: 'Roboto', sans-serif;
 
   h1 {
     display: inline-block;
-    // float: left;
     color: inherit;
     font-weight: 500;
     padding-bottom: 1em;
@@ -514,6 +516,19 @@ h1.highlight-purple {
     font-size: 1.5em;
     color: inherit;
   }
+}
+
+.work-sample {
+  position: relative;
+  padding: 8vh 8.7% 0;
+  background-color: var(--faint-gray);
+  color: #3C3C3C;
+
+  h1 {
+    color: var(--purple);
+    font-weight: 500;
+    padding-bottom: 1em;
+  }
 
   h4 {
     color: var(--purple);
@@ -529,18 +544,18 @@ h1.highlight-purple {
   background-color: rgba(244, 102, 98, .9);
   background-image: linear-gradient(to right, rgba(244, 102, 98, 0.9), rgba(84, 84, 171, 0.6));
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   width: 100vw;
   position: relative;
   left: 49%;
   right: 49%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  margin-left: -49vw;
+  margin-right: -49vw;
 
   h4 {
+    font-size: 12px;
     font-family: 'Arvo', serif;
     color: #FFFFFF;
-    font-weight: 400;
   }
 }
 
@@ -581,16 +596,50 @@ h1.highlight-purple {
     display: none;
   }
 
-  div.work-overview {
-    position: relative;
-    top: -150%;
+  .viewport {
+    position: absolute;
   }
 
-  section.work-overview {
+  // div.work-overview {
+  //   position: relative;
+  //   top: -150%;
+  // }
+
+  // section.work-overview {
+  //   position: relative;
+  //   top: 100vh;
+  //   height: 100vh;
+  // }
+
+  .work-overview {
     position: relative;
-    top: 100vh;
+    // padding: 0;
+    top: 75px;
     z-index: 1;
-    // height: 100vh;
+
+    img {
+      float: none;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      margin-left: unset;
+      transform: translate(-50%);
+      margin-bottom: 3rem;
+    }
+
+    h3 {
+      padding-bottom: 30px;
+    }
+  }
+
+  // .work-footer h4 {
+  //   // font-size: .5em;
+  // }
+
+  .work-sample {
+    position: relative;
+    // margin-top: 40px;
+    // top: calc(5vh + 20px);
   }
 
   .me {
@@ -603,16 +652,10 @@ h1.highlight-purple {
   }
 }
 
-@media screen and (max-width: 530px) {
-  .work-overview {
-    img {
-      float: none;
-      position: relative;
-      display: inline-block;
-      left: 50%;
-      margin-left: unset;
-      transform: translate(-50%);
-      margin-bottom: 3rem;
-    }
-  }
-}
+// Work Sample Mobile Top: Adjust based on length of paragraph 
+// @media screen and (max-width: 430px) {
+//   .work-sample {
+//     top: calc(10vh + 70px);
+//     // top: calc(25vh + 30px);
+//   }
+// }
