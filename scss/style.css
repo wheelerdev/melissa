@@ -8,6 +8,29 @@
   --off-black: #3C3C3C;
   --light-gray: #646464;
   --faint-gray: #FAFAFA;
+  --gradient-red-purple: linear-gradient(to right, rgba(244, 102, 98, 0.9), rgba(84, 84, 171, 0.25));
+  --gradient-red-background: rgba(244, 102, 98, .9);
+  --gradient-purple-red: linear-gradient(to right, rgba(84, 84, 171, 0.7), rgba(244, 102, 98, 0.4));
+  --gradient-purple-background: rgba(84, 84, 171, 0.6);
+}
+
+.red-gradient {
+  background-color: var(--gradient-red-background);
+  background-image: var(--gradient-red-purple);
+}
+
+.purple-gradient {
+  background-color: var(--gradient-purple-background);
+  background-image: var(--gradient-purple-red);
+}
+
+.highlight-red {
+  color: var(--red);
+}
+
+.highlight-purple,
+h1.highlight-purple {
+  color: var(--purple);
 }
 
 /* font-family: 'Arvo', serif;
@@ -117,7 +140,7 @@ ul {
 .menuicon {
   display: block;
   cursor: pointer;
-  color: #646464;
+  color: var(--light-gray);
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -302,17 +325,40 @@ h1 {
   text-align: right;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  color: #646464;
+  color: var(--light-gray);
   font-weight: 300;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: #646464;
+  color: var(--light-gray);
 }
 
 .nav-links li a:hover {
-  color: #5454AB;
+  color: var(--purple);
+}
+
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .landing {
@@ -322,16 +368,7 @@ h1 {
 .me {
   position: absolute;
   padding: 30vh 8.7% 0;
-  color: #3C3C3C;
-}
-
-.highlight-red {
-  color: #F46662;
-}
-
-.highlight-purple,
-h1.highlight-purple {
-  color: var(--purple);
+  color: var(--off-black);
 }
 
 .arrow {
@@ -341,11 +378,11 @@ h1.highlight-purple {
 }
 
 .services {
-  background-color: #FAFAFA;
+  background-color: var(--faint-gray);
 }
 
 .services h1 {
-  color: #3C3C3C;
+  color: var(--off-black);
   padding: 113px 8.7% 64px;
 }
 
@@ -374,6 +411,7 @@ h1.highlight-purple {
 
 .infobox img {
   height: 50px;
+  padding-top: 10px;
 }
 
 .infobox h2 {
@@ -385,10 +423,13 @@ h1.highlight-purple {
           margin-block-end: 0.5em;
 }
 
+.infobox .shrinkmargin {
+  margin: 7px;
+}
+
 .infobox h4 {
   font-family: 'Arvo', serif;
   font-size: 1em;
-  font-weight: 400;
   padding: 0 9%;
 }
 
@@ -400,7 +441,7 @@ h1.highlight-purple {
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: #3C3C3C;
+  color: var(--off-black);
   border-radius: 30px;
   width: 226px;
   height: 226px;
@@ -419,26 +460,27 @@ h1.highlight-purple {
 }
 
 .reviews {
-  background-color: rgba(244, 102, 98, 0.9);
   padding: 89px 8.7% 50px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(244, 102, 98, 0.9)), to(rgba(84, 84, 171, 0.6)));
-  background-image: linear-gradient(to right, rgba(244, 102, 98, 0.9), rgba(84, 84, 171, 0.6));
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  color: #FFFFFF;
 }
 
 .reviews h3 {
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
   font-weight: 500;
-  color: #FFFFFF;
-  padding-bottom: 50px;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.reviews p {
+  font-weight: 300;
+  font-size: 16px;
+  padding-bottom: 30px;
 }
 
 .about {
   color: #FFFFFF;
-  background-color: rgba(84, 84, 171, 0.6);
   padding: 113px 8.7%;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(84, 84, 171, 0.6)), to(rgba(244, 102, 98, 0.9)));
-  background-image: linear-gradient(to right, rgba(84, 84, 171, 0.6), rgba(244, 102, 98, 0.9));
 }
 
 .about h3 {
@@ -448,8 +490,8 @@ h1.highlight-purple {
 
 .contact {
   padding: 113px 8.7%;
-  color: #3C3C3C;
-  background-color: #FAFAFA;
+  color: var(--off-black);
+  background-color: var(--faint-gray);
 }
 
 .contact h3 {
@@ -459,11 +501,11 @@ h1.highlight-purple {
 
 .contact a:link,
 .contact a:visited {
-  color: #F46662;
+  color: var(--red);
 }
 
 .contact a:hover {
-  color: #5454AB;
+  color: var(--purple);
 }
 
 .footer {
@@ -471,9 +513,6 @@ h1.highlight-purple {
   color: #FFFFFF;
   font-size: 12px;
   font-weight: 400;
-  background-color: rgba(244, 102, 98, 0.9);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(244, 102, 98, 0.9)), to(rgba(84, 84, 171, 0.6)));
-  background-image: linear-gradient(to right, rgba(244, 102, 98, 0.9), rgba(84, 84, 171, 0.6));
   text-align: center;
   padding: 20px;
 }
@@ -485,8 +524,8 @@ h1.highlight-purple {
 
 .work-overview {
   position: relative;
-  padding: 8vh 8.7% 0;
-  color: #3C3C3C;
+  padding: 8vh 8.7% 8vh;
+  color: var(--off-black);
 }
 
 .work-overview h1 {
@@ -499,6 +538,7 @@ h1.highlight-purple {
 .work-overview img {
   float: right;
   width: 185px;
+  height: 257px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   margin-left: 25px;
@@ -511,9 +551,9 @@ h1.highlight-purple {
 
 .work-sample {
   position: relative;
-  padding: 8vh 8.7% 0;
+  padding: 10vh 8.7% 0;
   background-color: var(--faint-gray);
-  color: #3C3C3C;
+  color: var(--off-black);
 }
 
 .work-sample h1 {
@@ -532,9 +572,6 @@ h1.highlight-purple {
 }
 
 .work-footer {
-  background-color: rgba(244, 102, 98, 0.9);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(244, 102, 98, 0.9)), to(rgba(84, 84, 171, 0.6)));
-  background-image: linear-gradient(to right, rgba(244, 102, 98, 0.9), rgba(84, 84, 171, 0.6));
   text-align: center;
   padding: 20px 0;
   width: 100vw;
@@ -546,6 +583,88 @@ h1.highlight-purple {
 }
 
 .work-footer h4 {
+  font-size: 12px;
+  font-family: 'Arvo', serif;
+  color: #FFFFFF;
+}
+
+.service-block {
+  padding: 100px 19%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.service-block h1 {
+  color: var(--off-black);
+  font-weight: 500;
+  padding-bottom: .5em;
+}
+
+.service-block ul {
+  color: var(--off-black);
+  list-style: inside;
+  width: 86%;
+}
+
+.service-block ul li {
+  margin-bottom: .7em;
+}
+
+.service-block img {
+  min-width: 180px;
+}
+
+.sizing {
+  max-width: 60%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
+
+.sizing ul {
+  width: 100%;
+}
+
+.image-margin img {
+  margin-right: 45px;
+}
+
+.color-white h1,
+.color-white ul {
+  color: #FFFFFF;
+}
+
+.service-action {
+  padding: 55px 19%;
+}
+
+.service-action h2 {
+  font-size: 1.5em;
+  color: var(--off-black);
+  text-align: center;
+}
+
+.service-footer {
+  text-align: center;
+  padding: 20px 0;
+  width: 100vw;
+  position: relative;
+  left: 49%;
+  right: 49%;
+  margin-left: -49vw;
+  margin-right: -49vw;
+}
+
+.service-footer h4 {
   font-size: 12px;
   font-family: 'Arvo', serif;
   color: #FFFFFF;
@@ -570,11 +689,8 @@ h1.highlight-purple {
   .infoboxmargin {
     margin-bottom: 108px;
   }
-}
-
-@media screen and (max-width: 624px) {
-  .imspecial {
-    margin-bottom: 50px;
+  .service-block {
+    padding: 100px 15%;
   }
 }
 
@@ -591,6 +707,9 @@ h1.highlight-purple {
   .viewport {
     position: absolute;
   }
+  .imspecial {
+    margin-bottom: 50px;
+  }
   .work-overview {
     position: relative;
     top: 75px;
@@ -606,9 +725,6 @@ h1.highlight-purple {
             transform: translate(-50%);
     margin-bottom: 3rem;
   }
-  .work-overview h3 {
-    padding-bottom: 30px;
-  }
   .work-sample {
     position: relative;
   }
@@ -618,6 +734,13 @@ h1.highlight-purple {
   }
   .arrow {
     padding-left: 48%;
+  }
+  .service-block,
+  .service-action,
+  .service-footer {
+    position: relative;
+    top: 75px;
+    z-index: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
