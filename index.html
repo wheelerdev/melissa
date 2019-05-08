@@ -23,12 +23,10 @@
 
                         <!-- ACTUAL NAVIGATION MENU -->
                         <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
-                            <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
-                            <li class="nav__item"><a href="#about" onclick="location.reload()"
-                                    class="nav__link">About</a>
-                            </li>
-                            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                            <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                            <li class="nav__item"><a href="#work" onclick="location.reload()" class="nav__link">Work</a></li>
+                            <li class="nav__item"><a href="#about" onclick="location.reload()" class="nav__link">About</a></li>
+                            <li class="nav__item"><a href="#contact" onclick="location.reload()" class="nav__link">Contact</a></li>
                         </ul>
 
                         <!-- MENU TOGGLE BUTTON -->
@@ -57,9 +55,9 @@
             <img src="images/logo.svg">
             <ul class="nav-links">
                 <li><a href="services.html">Services</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
 
@@ -76,34 +74,42 @@
         <h1>Discover the words to <span class="highlight-purple">tell your story.</span> Rise above useless, wordy
             content and embrace strategic storytelling.</h1>
         <div class="container">
-            <div class="infobox">
-                <br>
-                <img src="images/icon-blog.svg">
-                <h2>Blog Writing</h2>
-                <h4>Bring value and readers with fresh, original articles.</h4>
-                <br>
-            </div>
-            <div class="infobox">
-                <br>
-                <img src="images/icon-content.svg">
-                <h2>Content Writing</h2>
-                <h4>Made-to-order content for your unique needs and goals.</h4>
-                <br>
-            </div>
-            <div class="infobox infoboxmargin imspecial">
-                <br>
-                <img src="images/icon-articles.svg">
-                <h2 class="shrinkmargin">Articles & Media Outreach</h2>
-                <h4 class="minusmargin">Researched, concise articles aimed for your target audience.</h4>
-                <br>
-            </div>
-            <div class="infobox infoboxmargin">
-                <br>
-                <img src="images/icon-strategy.svg">
-                <h2>Content Strategy</h2>
-                <h4>Let's discover and strategize the best ways to tell your story.</h4>
-                <br>
-            </div>
+            <a href="services.html#blogwriting" class="hvr-grow">
+                <div class="infobox">
+                    <br>
+                    <img src="images/icon-blog.svg">
+                    <h2>Blog Writing</h2>
+                    <h4>Bring value and readers with fresh, original articles.</h4>
+                    <br>
+                </div>
+            </a>
+            <a href="services.html#websitecontent" class="hvr-grow">
+                <div class="infobox">
+                    <br>
+                    <img src="images/icon-content.svg">
+                    <h2>Content Writing</h2>
+                    <h4>Made-to-order content for your unique needs and goals.</h4>
+                    <br>
+                </div>
+            </a>
+            <a href="services.html#articles" class="hvr-grow">
+                <div class="infobox infoboxmargin imspecial">
+                    <br>
+                    <img src="images/icon-articles.svg">
+                    <h2 class="shrinkmargin">Articles & Media Outreach</h2>
+                    <h4 class="minusmargin">Researched, concise articles aimed for your target audience.</h4>
+                    <br>
+                </div>
+            </a>
+            <a href="services.html#strategy" class="hvr-grow">
+                <div class="infobox infoboxmargin">
+                    <br>
+                    <img src="images/icon-strategy.svg">
+                    <h2>Content Strategy</h2>
+                    <h4>Let's discover and strategize the best ways to tell your story.</h4>
+                    <br>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -127,7 +133,7 @@
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="work">
         <h1>Work Samples</h1>
         <div class="container">
             <a href="work-healthypartner.html" class="hvr-grow">
@@ -135,15 +141,21 @@
                     <img src="images/healthy.svg">
                 </div>
             </a>
-            <div class="clientbox">
-                <img src="images/scad.svg">
-            </div>
-            <div class="clientbox infoboxmargin imspecial">
-                <img src="images/kfb.svg">
-            </div>
-            <div class="clientbox infoboxmargin">
-                <img src="images/redrock.svg">
-            </div>
+            <a href="work-scad.html" class="hvr-grow">
+                <div class="clientbox">
+                    <img src="images/scad.svg">
+                </div>
+            </a>
+            <a href="work-kfb.html" class="hvr-grow">
+                <div class="clientbox infoboxmargin imspecial">
+                    <img src="images/kfb.svg">
+                </div>
+            </a>
+            <a href="work-redrock.html" class="hvr-grow">
+                <div class="clientbox infoboxmargin">
+                    <img src="images/redrock.svg">
+                </div>
+            </a>
         </div>
     </section>
 

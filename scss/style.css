@@ -51,6 +51,13 @@ ul {
   width: 100%;
 }
 
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+
 .nav__toggle {
   display: inline-block;
   position: absolute;
@@ -500,11 +507,14 @@ h1 {
 }
 
 .contact a:link,
-.contact a:visited {
+.contact a:visited,
+.service-action a:link,
+.service-action a:visited {
   color: var(--red);
 }
 
-.contact a:hover {
+.contact a:hover,
+.service-action a:hover {
   color: var(--purple);
 }
 
@@ -609,7 +619,7 @@ h1 {
 
 .service-block ul {
   color: var(--off-black);
-  list-style: inside;
+  list-style: outside;
   width: 86%;
 }
 
