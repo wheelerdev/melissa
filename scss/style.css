@@ -490,6 +490,10 @@ h1 {
   padding: 113px 8.7%;
 }
 
+.about h1 {
+  padding-bottom: 5px;
+}
+
 .about h3 {
   font-family: 'Arvo', serif;
   font-weight: 500;
@@ -501,6 +505,10 @@ h1 {
   background-color: var(--faint-gray);
 }
 
+.contact h1 {
+  padding-bottom: 5px;
+}
+
 .contact h3 {
   font-family: 'Arvo', serif;
   font-weight: 500;
@@ -508,13 +516,13 @@ h1 {
 
 .contact a:link,
 .contact a:visited,
-.service-action a:link,
-.service-action a:visited {
+.action a:link,
+.action a:visited {
   color: var(--red);
 }
 
 .contact a:hover,
-.service-action a:hover {
+.action a:hover {
   color: var(--purple);
 }
 
@@ -548,7 +556,6 @@ h1 {
 .work-overview img {
   float: right;
   width: 185px;
-  height: 257px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   margin-left: 25px;
@@ -653,11 +660,11 @@ h1 {
   color: #FFFFFF;
 }
 
-.service-action {
+.action {
   padding: 55px 19%;
 }
 
-.service-action h2 {
+.action h2 {
   font-size: 1.5em;
   color: var(--off-black);
   text-align: center;
@@ -747,7 +754,6 @@ h1 {
     padding-left: 48%;
   }
   .service-block,
-  .service-action,
   .service-footer {
     position: relative;
     top: 75px;
