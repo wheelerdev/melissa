@@ -517,12 +517,15 @@ h1 {
 .contact a:link,
 .contact a:visited,
 .action a:link,
-.action a:visited {
+.action a:visited,
+.service-action a:link,
+.service-action a:visited {
   color: var(--red);
 }
 
 .contact a:hover,
-.action a:hover {
+.action a:hover,
+.service-action a:hover {
   color: var(--purple);
 }
 
@@ -660,11 +663,13 @@ h1 {
   color: #FFFFFF;
 }
 
-.action {
+.action,
+.service-action {
   padding: 55px 19%;
 }
 
-.action h2 {
+.action h2,
+.service-action h2 {
   font-size: 1.5em;
   color: var(--off-black);
   text-align: center;
@@ -754,6 +759,7 @@ h1 {
     padding-left: 48%;
   }
   .service-block,
+  .service-action,
   .service-footer {
     position: relative;
     top: 75px;
