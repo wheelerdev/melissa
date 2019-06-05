@@ -518,6 +518,8 @@ h1 {
 
 .contact a:link,
 .contact a:visited,
+.work-sample a:link,
+.work-sample a:visited,
 .action a:link,
 .action a:visited,
 .service-action a:link,
@@ -546,8 +548,11 @@ h1 {
 
 
 .work-landing {
-  padding-bottom: 50px;
   margin-bottom: 50px;
+}
+
+#hpps-pad {
+  padding-bottom: 90px;
 }
 
 .work-overview {
@@ -565,13 +570,14 @@ h1 {
   img {
     float: right;
     width: 185px;
-    // height: 257px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
     margin-left: 25px;
+    margin-bottom: 25px;
   }
 
   h3 {
-    font-size: 1.5em;
+    font-size: 1.25em;
+    font-weight: 300;
     color: inherit;
   }
 }
@@ -586,6 +592,14 @@ h1 {
     color: var(--purple);
     font-weight: 500;
     padding-bottom: 1em;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85%;
+    padding-bottom: 2em;
   }
 
   h4 {
