@@ -545,7 +545,11 @@ h1 {
 }
 
 #hpps-pad {
-  padding-bottom: 90px;
+  padding-bottom: 80px;
+}
+
+#hpps-pad h1 {
+  display: inline-block;
 }
 
 .work-overview {
@@ -555,7 +559,7 @@ h1 {
 }
 
 .work-overview h1 {
-  display: inline-block;
+  display: block;
   color: inherit;
   font-weight: 500;
   padding-bottom: 1em;
