@@ -516,18 +516,20 @@ h1 {
 
 .contact a:link,
 .contact a:visited,
-.work-sample a:link,
 .work-sample a:visited,
 .action a:link,
 .action a:visited,
 .service-action a:link,
-.service-action a:visited {
+.service-action a:visited,
+.service-footer a:hover {
   color: var(--red);
 }
 
 .contact a:hover,
 .action a:hover,
-.service-action a:hover {
+.service-action a:hover,
+.footer a:hover,
+.work-footer a:hover {
   color: var(--purple);
 }
 
@@ -538,6 +540,10 @@ h1 {
   font-weight: 400;
   text-align: center;
   padding: 20px;
+}
+
+.footer a {
+  color: inherit;
 }
 
 .work-landing {
@@ -627,6 +633,11 @@ h1 {
   color: #FFFFFF;
 }
 
+.work-footer h4 a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 .service-block {
   padding: 90px 19%;
   display: -webkit-box;
@@ -709,6 +720,11 @@ h1 {
   font-size: 12px;
   font-family: 'Arvo', serif;
   color: #FFFFFF;
+}
+
+.service-footer h4 a {
+  color: inherit;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 999px) {
