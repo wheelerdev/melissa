@@ -561,7 +561,8 @@ h1 {
 .action a:hover,
 .service-action a:hover,
 .footer a:hover,
-.work-footer a:hover {
+.work-footer a:hover,
+.service-a-red a:hover {
   color: var(--purple);
 }
 
@@ -743,6 +744,22 @@ h1 {
     color: var(--off-black);
     text-align: center;
   }
+}
+
+.service-a-red {
+  a {
+    color: var(--red);
+  }
+}
+
+.service-a-purple {
+  a {
+    color: var(--purple);
+  }
+}
+
+.service-a-purple a:hover {
+  color: white;
 }
 
 .service-footer {
