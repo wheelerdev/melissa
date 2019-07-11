@@ -78,6 +78,7 @@ a:active {
 // Main Navigation Menu
 // ---------------------------
 
+
 .nav {
 
   // Toggle Button
@@ -380,6 +381,14 @@ h1 {
 
 .landing {
   height: 100vh;
+  margin: auto;
+  max-width: 1400px;
+}
+
+.no-wider-than {
+  margin: auto;
+  max-width: 1400px;
+  // box-sizing: border-box;
 }
 
 .me {
@@ -389,13 +398,20 @@ h1 {
 }
 
 .arrow {
-  padding-left: 50%;
+  left: 50%;
   position: absolute;
   bottom: 5%;
 }
 
-.services {
+.full-width-gray {
   background-color: var(--faint-gray);
+  width: 100vw;
+}
+
+.services {
+  // background-color: var(--faint-gray);
+  max-width: 1400px;
+  margin: auto;
 
   h1 {
     color: var(--off-black);
@@ -403,9 +419,12 @@ h1 {
   }
 }
 
+
+
 .container {
   display: flex;
   justify-content: space-evenly;
+  max-width: 1400px;
 }
 
 .infobox {
@@ -469,7 +488,11 @@ h1 {
 }
 
 .reviews {
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: auto;
   padding: 89px 8.7% 50px;
+  // padding: 113px 8.7% 64px;
   font-family: 'Roboto', sans-serif;
   font-style: italic;
   color: #FFFFFF;
@@ -488,8 +511,11 @@ h1 {
 }
 
 .about {
+  box-sizing: border-box;
   color: #FFFFFF;
   padding: 113px 8.7%;
+  max-width: 1400px;
+  margin: auto;
 
   h1 {
     padding-bottom: 5px;
@@ -502,6 +528,9 @@ h1 {
 }
 
 .contact {
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: auto;
   padding: 113px 8.7%;
   color: var(--off-black);
   background-color: var(--faint-gray);
@@ -537,6 +566,7 @@ h1 {
 }
 
 .footer {
+  box-sizing: border-box;
   font-family: 'Arvo', serif;
   color: #FFFFFF;
   font-size: 12px;
@@ -598,6 +628,7 @@ h1 {
   padding: 10vh 8.7% 0;
   background-color: var(--faint-gray);
   color: var(--off-black);
+  box-sizing: border-box;
 
   h1 {
     color: var(--purple);
@@ -655,6 +686,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1400px;
+  margin: auto;
 
   h1 {
     color: var(--off-black);
@@ -762,7 +795,7 @@ h1 {
 
 }
 
-@media screen and (min-width: 624px) {
+@media screen and (min-width: 625px) {
 
   .mobile-nav,
   .nav-only {
@@ -809,9 +842,39 @@ h1 {
     z-index: 1;
   }
 
-  .arrow {
-    padding-left: 48%;
+  .purple-gradient {
+    background-color: unset;
+    background-image: unset;
   }
+
+  .nav-purp {
+    background-color: var(--gradient-purple-background);
+    background-image: var(--gradient-purple-red);
+  }
+
+  .red-gradient {
+    background-color: unset;
+    background-image: unset;
+  }
+
+  .red-gradient-footer {
+    background-color: var(--gradient-red-background);
+    background-image: var(--gradient-red-purple);
+  }
+
+  .nav-red {
+    background-color: var(--gradient-red-background);
+    background-image: var(--gradient-red-purple);
+  }
+
+  .full-width-gray {
+    background-color: unset;
+  }
+
+  .nav-gray {
+    background-color: var(--faint-gray);
+  }
+
 
   .service-block,
   .service-action,
