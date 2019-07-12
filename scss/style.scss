@@ -488,8 +488,8 @@ h1 {
 }
 
 .reviews {
-  box-sizing: border-box;
-  max-width: 1400px;
+  box-sizing: content-box;
+  max-width: 1300px;
   margin: auto;
   padding: 89px 8.7% 50px;
   // padding: 113px 8.7% 64px;
@@ -511,10 +511,10 @@ h1 {
 }
 
 .about {
-  box-sizing: border-box;
+  box-sizing: content-box;
   color: #FFFFFF;
   padding: 113px 8.7%;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: auto;
 
   h1 {
@@ -528,8 +528,8 @@ h1 {
 }
 
 .contact {
-  box-sizing: border-box;
-  max-width: 1400px;
+  box-sizing: content-box;
+  max-width: 1300px;
   margin: auto;
   padding: 113px 8.7%;
   color: var(--off-black);
