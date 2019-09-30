@@ -45,6 +45,10 @@ ul {
   line-height: normal;
 }
 
+strong {
+  font-weight: bold;
+}
+
 p,
 ul {
   height: 100%;
@@ -636,10 +640,12 @@ h1 {
   margin-right: auto;
   max-width: 85%;
   padding-bottom: 2em;
+  padding-top: 1em;
 }
 
 .work-sample h4 {
   color: var(--purple);
+  margin-bottom: 5px;
 }
 
 .work-sample p {
@@ -664,9 +670,14 @@ h1 {
   color: #FFFFFF;
 }
 
-.work-footer h4 a {
+.work-footer h4 a,
+.work-footer h4 a:visited {
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.work-footer h4 a:hover {
+  color: var(--purple);
 }
 
 .service-block {
